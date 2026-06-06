@@ -1,47 +1,17 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-from openai import OpenAI
-from dotenv import load_dotenv
-import os
+from app.routers.health import router as health_router
+from app.routers.symptoms import router as symptom_router
 
-load_dotenv()
-
-client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY")
+app = FastAPI(
+    title="Healthcare AI Assistant",
+    version="1.0.0"
 )
 
-app = FastAPI()
-
-class ChatRequest(BaseModel):
-    message: str
+app.include_router(health_router)
+app.include_router(symptom_router)
 
 @app.get("/")
 def home():
-    return {"message": "Backend Running"}
-
-@app.post("/chat")
-async def chat(request: ChatRequest):
-
-    response = client.chat.completions.create(
-        model="gpt-4.1-mini",
-        messages=[
-            {
-                "role": "system",
-                "content": (
-                    "You are a helpful healthcare assistant. "
-                    "Provide educational information about health topics. "
-                    "Do not diagnose diseases. "
-                    "Encourage users to consult healthcare professionals "
-                    "for medical advice, diagnosis, or treatment."
-                )
-            },
-            {
-                "role": "user",
-                "content": request.message
-            }
-        ]
-    )
-
     return {
-        "response": response.choices[0].message.content
+        "message": "Healthcare AI Assistant API Running"
     }
