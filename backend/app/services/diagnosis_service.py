@@ -1,10 +1,12 @@
 import pandas as pd
+from app.services.nlp_service import extract_symptoms
 
 df = pd.read_csv("data/disease_dataset.csv")
 
 def analyze_symptom(symptom: str):
 
-    symptom = symptom.lower()
+    extracted = extract_symptoms(symptom)
+    symptom = " ".join(extracted).lower()
 
     results = []
 
