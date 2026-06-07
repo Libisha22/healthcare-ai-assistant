@@ -2,14 +2,49 @@ def analyze_symptom(symptom: str):
 
     symptom = symptom.lower()
 
+    conditions = []
+
     if "fever" in symptom:
-        return ["Common Cold", "Flu"]
 
-    elif "headache" in symptom:
-        return ["Migraine", "Stress"]
+        conditions.append({
+            "condition": "Flu",
+            "confidence": 0.90
+        })
 
-    elif "cough" in symptom:
-        return ["Viral Infection", "Bronchitis"]
+        conditions.append({
+            "condition": "Common Cold",
+            "confidence": 0.75
+        })
 
-    else:
-        return ["Unknown Condition"]
+    if "cough" in symptom:
+
+        conditions.append({
+            "condition": "COVID-19",
+            "confidence": 0.80
+        })
+
+        conditions.append({
+            "condition": "Bronchitis",
+            "confidence": 0.65
+        })
+
+    if "headache" in symptom:
+
+        conditions.append({
+            "condition": "Migraine",
+            "confidence": 0.85
+        })
+
+        conditions.append({
+            "condition": "Stress",
+            "confidence": 0.70
+        })
+
+    if not conditions:
+
+        conditions.append({
+            "condition": "Unknown Condition",
+            "confidence": 0.10
+        })
+
+    return conditions

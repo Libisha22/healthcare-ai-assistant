@@ -40,7 +40,8 @@ def symptom_history():
     for record in records:
         result.append({
             "id": record.id,
-            "symptom": record.symptom
+            "symptom": record.symptom,
+            "created_at": record.created_at
         })
 
     db.close()
