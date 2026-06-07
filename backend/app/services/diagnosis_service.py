@@ -1,50 +1,42 @@
+import pandas as pd
+
+df = pd.read_csv("data/disease_dataset.csv")
+
 def analyze_symptom(symptom: str):
 
     symptom = symptom.lower()
 
-    conditions = []
+    results = []
 
-    if "fever" in symptom:
+    for _, row in df.iterrows():
 
-        conditions.append({
-            "condition": "Flu",
-            "confidence": 0.90
-        })
+        disease = row["Disease"]
 
-        conditions.append({
-            "condition": "Common Cold",
-            "confidence": 0.75
-        })
+        symptoms = row["Symptoms"].lower().split(";")
 
-    if "cough" in symptom:
+        score = 0
 
-        conditions.append({
-            "condition": "COVID-19",
-            "confidence": 0.80
-        })
+        for s in symptoms:
+            if s in symptom:
+                score += 1
 
-        conditions.append({
-            "condition": "Bronchitis",
-            "confidence": 0.65
-        })
+        if score > 0:
 
-    if "headache" in symptom:
+            confidence = round(
+                score / len(symptoms),
+                2
+            )
 
-        conditions.append({
-            "condition": "Migraine",
-            "confidence": 0.85
-        })
+            results.append({
+                "condition": disease,
+                "confidence": confidence
+            })
 
-        conditions.append({
-            "condition": "Stress",
-            "confidence": 0.70
-        })
+    if not results:
 
-    if not conditions:
-
-        conditions.append({
+        results.append({
             "condition": "Unknown Condition",
             "confidence": 0.10
         })
 
-    return conditions
+    return results
