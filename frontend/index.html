@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Healthcare Assistant</title>
+</head>
+<body>
+
+<h2>AI Healthcare Assistant</h2>
+
+<textarea id="symptoms" placeholder="Enter symptoms..." rows="5" cols="40"></textarea>
+<br><br>
+
+<button onclick="predictDisease()">Predict</button>
+
+<h3 id="result"></h3>
+
+<script>
+function predictDisease() {
+    let symptoms = document.getElementById("symptoms").value;
+
+    fetch("http://127.0.0.1:5000/predict", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ symptoms: symptoms })
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("result").innerText =
+            "Predicted Disease: " + data.disease;
+    })
+    .catch(err => {
+        document.getElementById("result").innerText =
+            "Error connecting to server";
+    });
+}
+</script>
+
+</body>
+</html>

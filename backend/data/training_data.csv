@@ -1,10 +1,15 @@
 symptoms,disease
-fever cough fatigue,Flu
-fever cough sneezing,Common Cold
-fever cough loss of smell,COVID-19
-headache nausea,Migraine
-cough chest pain,Bronchitis
-headache fatigue,Stress
-fever headache fatigue,Flu
-cough fever,COVID-19
-headache stress,Stress
+high fever dry cough body pain chills weakness,flu
+runny nose sneezing sore throat mild fever fatigue,flu
+headache fever muscle pain cold cough tiredness,flu
+persistent cough chest discomfort mild fever body pain,flu
+
+severe chest pain breathlessness sweating dizziness nausea,heart_disease
+left arm pain chest tightness short breath fatigue anxiety,heart_disease
+irregular heartbeat fainting weakness cold sweat chest pressure,heart_disease
+severe fatigue chest pain breathlessness dizziness weakness,heart_disease
+
+stomach pain vomiting diarrhea dehydration fever weakness,food_poisoning
+nausea abdominal cramps loose motion loss of appetite fatigue,food_poisoning
+severe stomach ache vomiting fever dehydration weakness,food_poisoning
+food poisoning stomach cramps diarrhea body weakness fever,food_poisoning
