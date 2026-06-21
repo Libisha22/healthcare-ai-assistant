@@ -1,41 +1,98 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>AI Healthcare Assistant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedScope AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<h2>AI Healthcare Assistant</h2>
+    <div class="container">
 
-<textarea id="symptoms" placeholder="Enter symptoms..." rows="5" cols="40"></textarea>
-<br><br>
+        <!-- HEADER -->
 
-<button onclick="predictDisease()">Predict</button>
+        <div class="header">
 
-<h3 id="result"></h3>
+            <h1>🩺 MedScope AI</h1>
 
-<script>
-function predictDisease() {
-    let symptoms = document.getElementById("symptoms").value;
+            <p>
+                AI-Powered Disease Prediction &
+                Healthcare Recommendation System
+            </p>
 
-    fetch("http://127.0.0.1:5000/predict", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ symptoms: symptoms })
-    })
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById("result").innerText =
-            "Predicted Disease: " + data.disease;
-    })
-    .catch(err => {
-        document.getElementById("result").innerText =
-            "Error connecting to server";
-    });
-}
-</script>
+        </div>
+
+        <!-- INPUT -->
+
+        <div class="card">
+
+            <textarea
+                id="symptoms"
+                placeholder="Enter symptoms (Example: fever cough body pain)">
+            </textarea>
+
+            <button onclick="predictDisease()">
+                Analyze Symptoms
+            </button>
+
+            <div id="loading" class="loading">
+                Analyzing symptoms...
+            </div>
+
+        </div>
+
+        <!-- RESULTS -->
+
+        <div id="results"></div>
+
+        <!-- ANALYTICS -->
+
+        <div class="analytics-container">
+
+    <div class="analytics-grid">
+   
+    </div>
+</div>
+
+        <!-- HISTORY -->
+
+        <div class="history-container">
+
+            <h2>📜 Recent Predictions</h2>
+
+            <div id="history"></div>
+
+        </div>
+        <button onclick="downloadReport()">
+            Download Medical Report
+        </button>
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            Powered by FastAPI • Machine Learning • NLP
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
+```
