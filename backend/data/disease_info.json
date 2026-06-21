@@ -1,0 +1,105 @@
+{
+  "flu": {
+    "description": "Viral infection affecting the respiratory system.",
+    "severity": "Low",
+    "doctor": "General Physician",
+    "medicines": ["Paracetamol", "ORS"],
+    "precautions": ["Drink plenty of water", "Take adequate rest"]
+  },
+
+  "covid19": {
+    "description": "Contagious respiratory illness caused by SARS-CoV-2.",
+    "severity": "Medium",
+    "doctor": "Pulmonologist",
+    "medicines": ["Paracetamol", "Vitamin C"],
+    "precautions": ["Isolate yourself", "Monitor oxygen levels"]
+  },
+
+  "common_cold": {
+    "description": "Mild viral infection of the nose and throat.",
+    "severity": "Low",
+    "doctor": "General Physician",
+    "medicines": ["Cetirizine", "Paracetamol"],
+    "precautions": ["Rest well", "Drink warm fluids"]
+  },
+
+  "bronchitis": {
+    "description": "Inflammation of the bronchial tubes.",
+    "severity": "Medium",
+    "doctor": "Pulmonologist",
+    "medicines": ["Cough Syrup", "Bronchodilator"],
+    "precautions": ["Avoid smoking", "Stay hydrated"]
+  },
+
+  "asthma": {
+    "description": "Condition that narrows and swells airways.",
+    "severity": "Medium",
+    "doctor": "Pulmonologist",
+    "medicines": ["Inhaler", "Bronchodilator"],
+    "precautions": ["Avoid dust", "Avoid smoke exposure"]
+  },
+
+  "dengue": {
+    "description": "Mosquito-borne viral infection.",
+    "severity": "High",
+    "doctor": "Infectious Disease Specialist",
+    "medicines": ["Paracetamol", "Fluids"],
+    "precautions": ["Stay hydrated", "Monitor platelet count"]
+  },
+
+  "malaria": {
+    "description": "Mosquito-borne disease caused by parasites.",
+    "severity": "High",
+    "doctor": "Infectious Disease Specialist",
+    "medicines": ["Antimalarial Drugs"],
+    "precautions": ["Complete medication course", "Stay hydrated"]
+  },
+
+  "diabetes": {
+    "description": "Chronic condition affecting blood sugar regulation.",
+    "severity": "Medium",
+    "doctor": "Endocrinologist",
+    "medicines": ["Metformin"],
+    "precautions": ["Monitor blood sugar", "Maintain healthy diet"]
+  },
+
+  "hypertension": {
+    "description": "Persistently elevated blood pressure.",
+    "severity": "Medium",
+    "doctor": "Cardiologist",
+    "medicines": ["Amlodipine"],
+    "precautions": ["Reduce salt intake", "Exercise regularly"]
+  },
+
+  "migraine": {
+    "description": "Neurological condition causing severe headaches.",
+    "severity": "Low",
+    "doctor": "Neurologist",
+    "medicines": ["Ibuprofen"],
+    "precautions": ["Avoid stress", "Sleep properly"]
+  },
+
+  "stress": {
+    "description": "Mental or emotional strain caused by pressure.",
+    "severity": "Low",
+    "doctor": "Psychologist",
+    "medicines": ["None"],
+    "precautions": ["Meditation", "Regular exercise"]
+  },
+
+  "heart_disease": {
+    "description": "Disorders affecting the heart and blood vessels.",
+    "severity": "High",
+    "doctor": "Cardiologist",
+    "medicines": ["Aspirin"],
+    "precautions": ["Avoid smoking", "Control cholesterol"]
+  },
+
+  "food_poisoning": {
+    "description": "Illness caused by contaminated food.",
+    "severity": "Medium",
+    "doctor": "General Physician",
+    "medicines": ["ORS", "Antiemetics"],
+    "precautions": ["Stay hydrated", "Avoid contaminated food"]
+  }
+}

@@ -13,3 +13,202 @@ stomach pain vomiting diarrhea dehydration fever weakness,food_poisoning
 nausea abdominal cramps loose motion loss of appetite fatigue,food_poisoning
 severe stomach ache vomiting fever dehydration weakness,food_poisoning
 food poisoning stomach cramps diarrhea body weakness fever,food_poisoning
+
+
+runny nose sneezing sore throat mild fever,common_cold
+blocked nose cough sneezing watery eyes,common_cold
+loss of smell dry cough fever,covid19
+fever cough breathing difficulty fatigue,covid19
+persistent cough mucus chest pain,bronchitis
+chest congestion cough fatigue,bronchitis
+wheezing chest tightness shortness of breath,asthma
+difficulty breathing coughing wheezing,asthma
+high fever sweating chills headache,malaria
+fever body pain weakness sweating,malaria
+joint pain fever skin rash,dengue
+high fever severe headache muscle pain,dengue
+frequent urination excessive thirst fatigue,diabetes
+blurred vision thirst weight loss,diabetes
+high blood pressure dizziness headache,hypertension
+chest discomfort headache blurred vision,hypertension
+
+runny nose sneezing sore throat mild fever fatigue,common_cold
+blocked nose watery eyes sneezing cough,common_cold
+mild fever sore throat runny nose fatigue,common_cold
+
+loss of smell dry cough fever breathing difficulty,covid19
+fever cough fatigue body pain loss of taste,covid19
+persistent dry cough fever breathing problem,covid19
+
+persistent cough mucus chest pain fatigue,bronchitis
+chest congestion cough fatigue weakness,bronchitis
+cough mucus shortness of breath chest discomfort,bronchitis
+
+wheezing shortness of breath chest tightness,asthma
+difficulty breathing coughing wheezing,asthma
+breathing difficulty chest tightness fatigue,asthma
+
+high fever chills headache sweating,malaria
+fever body pain weakness sweating,malaria
+headache chills sweating high temperature,malaria
+
+joint pain fever skin rash fatigue,dengue
+high fever severe headache muscle pain,dengue
+body pain skin rash fever weakness,dengue
+
+frequent urination excessive thirst fatigue,diabetes
+blurred vision thirst weight loss fatigue,diabetes
+high blood sugar fatigue frequent urination,diabetes
+
+high blood pressure dizziness headache,hypertension
+chest discomfort headache blurred vision,hypertension
+dizziness fatigue elevated blood pressure,hypertension
+
+severe headache nausea sensitivity to light,migraine
+head pain vomiting nausea light sensitivity,migraine
+intense headache dizziness nausea,migraine
+
+
+
+high fever dry cough body pain chills weakness,flu
+runny nose fever fatigue cough muscle pain,flu
+high temperature headache cough weakness,flu
+body aches fever chills cough tiredness,flu
+fever sore throat dry cough fatigue,flu
+persistent fever body pain weakness,flu
+cough headache fever chills,flu
+high fever tiredness muscle pain cough,flu
+fever fatigue cough body ache,flu
+chills weakness cough high temperature,flu
+
+runny nose sneezing sore throat mild fever,common_cold
+blocked nose watery eyes sneezing cough,common_cold
+mild fever sore throat runny nose fatigue,common_cold
+sneezing congestion cough headache,common_cold
+runny nose mild cough body ache,common_cold
+nasal congestion sneezing fatigue,common_cold
+sore throat runny nose cough,common_cold
+blocked nose headache sneezing,common_cold
+mild fever congestion runny nose,common_cold
+cough sneezing watery eyes fatigue,common_cold
+
+loss of smell dry cough fever breathing difficulty,covid19
+fever cough fatigue body pain loss of taste,covid19
+persistent dry cough fever breathing problem,covid19
+high fever cough fatigue loss of smell,covid19
+difficulty breathing cough weakness fever,covid19
+loss of taste fever dry throat,covid19
+cough chest tightness fever fatigue,covid19
+body pain fever cough loss of smell,covid19
+persistent cough breathing issue fatigue,covid19
+fever dry cough weakness loss of taste,covid19
+
+persistent cough mucus chest pain fatigue,bronchitis
+chest congestion cough fatigue weakness,bronchitis
+cough mucus shortness of breath chest discomfort,bronchitis
+persistent cough chest heaviness fatigue,bronchitis
+mucus cough wheezing chest pain,bronchitis
+cough breathing difficulty mucus production,bronchitis
+fatigue chest congestion cough weakness,bronchitis
+wheezing persistent cough chest tightness,bronchitis
+mucus cough mild fever chest pain,bronchitis
+breathing discomfort cough fatigue mucus,bronchitis
+
+wheezing shortness of breath chest tightness,asthma
+difficulty breathing coughing wheezing,asthma
+breathing difficulty chest tightness fatigue,asthma
+shortness of breath wheezing chest discomfort,asthma
+night cough breathing difficulty,asthma
+chest tightness fatigue wheezing,asthma
+persistent wheezing short breath,asthma
+difficulty breathing chest pressure cough,asthma
+wheezing fatigue chest tightness,asthma
+short breath cough wheezing weakness,asthma
+
+high fever chills headache sweating,malaria
+fever body pain weakness sweating,malaria
+headache chills sweating high temperature,malaria
+fever shivering body ache fatigue,malaria
+sweating headache weakness chills,malaria
+high temperature chills fatigue headache,malaria
+body pain fever sweating dizziness,malaria
+persistent fever chills sweating weakness,malaria
+headache fever shivering tiredness,malaria
+sweating fever chills muscle pain,malaria
+
+joint pain fever skin rash fatigue,dengue
+high fever severe headache muscle pain,dengue
+body pain skin rash fever weakness,dengue
+fever headache joint pain fatigue,dengue
+rash body pain weakness fever,dengue
+high fever muscle ache skin rash,dengue
+joint pain fatigue fever headache,dengue
+body ache fever rash tiredness,dengue
+persistent fever skin rash weakness,dengue
+muscle pain headache fever joint ache,dengue
+
+frequent urination excessive thirst fatigue,diabetes
+blurred vision thirst weight loss fatigue,diabetes
+high blood sugar fatigue frequent urination,diabetes
+constant thirst weakness weight loss,diabetes
+excessive hunger fatigue frequent urination,diabetes
+slow wound healing fatigue thirst,diabetes
+blurred vision excessive thirst weakness,diabetes
+frequent urination tiredness increased hunger,diabetes
+weight loss fatigue thirst,diabetes
+high glucose fatigue blurred vision,diabetes
+
+high blood pressure dizziness headache,hypertension
+chest discomfort headache blurred vision,hypertension
+dizziness fatigue elevated blood pressure,hypertension
+headache vision problems high pressure,hypertension
+fatigue dizziness hypertension symptoms,hypertension
+blurred vision headache weakness,hypertension
+high bp chest discomfort fatigue,hypertension
+persistent headache elevated pressure,hypertension
+dizziness vision issues headache,hypertension
+fatigue headache blood pressure increase,hypertension
+
+severe headache nausea sensitivity to light,migraine
+head pain vomiting nausea light sensitivity,migraine
+intense headache dizziness nausea,migraine
+throbbing headache nausea weakness,migraine
+headache sensitivity to sound nausea,migraine
+severe head pain fatigue dizziness,migraine
+persistent headache vomiting nausea,migraine
+light sensitivity intense headache,migraine
+head pain dizziness weakness,migraine
+nausea headache fatigue light sensitivity,migraine
+
+severe chest pain breathlessness sweating dizziness nausea,heart_disease
+left arm pain chest tightness short breath fatigue anxiety,heart_disease
+irregular heartbeat fainting weakness cold sweat chest pressure,heart_disease
+severe fatigue chest pain breathlessness dizziness weakness,heart_disease
+chest discomfort sweating nausea weakness,heart_disease
+heart palpitations chest pressure fatigue,heart_disease
+shortness of breath chest pain sweating,heart_disease
+weakness dizziness chest tightness,heart_disease
+cold sweat chest discomfort fatigue,heart_disease
+chest heaviness breathlessness weakness,heart_disease
+
+stomach pain vomiting diarrhea dehydration fever weakness,food_poisoning
+nausea abdominal cramps loose motion loss of appetite fatigue,food_poisoning
+severe stomach ache vomiting fever dehydration weakness,food_poisoning
+food poisoning stomach cramps diarrhea body weakness fever,food_poisoning
+abdominal pain nausea diarrhea fatigue,food_poisoning
+vomiting dehydration stomach discomfort fever,food_poisoning
+stomach cramps weakness nausea diarrhea,food_poisoning
+loss of appetite abdominal pain vomiting,food_poisoning
+fever diarrhea stomach ache weakness,food_poisoning
+vomiting loose motion dehydration fatigue,food_poisoning
+
+stress anxiety fatigue headache sleep problems,stress
+mental pressure headache tiredness anxiety,stress
+difficulty sleeping fatigue stress symptoms,stress
+anxiety weakness headache stress,stress
+fatigue irritability sleep disturbance,stress
+mental exhaustion headache tiredness,stress
+sleep problems anxiety weakness,stress
+stress fatigue concentration issues,stress
+anxiety headache sleep difficulty,stress
+emotional pressure fatigue weakness,stress

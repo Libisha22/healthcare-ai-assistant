@@ -1,0 +1,69 @@
+symptoms,disease
+high fever dry cough body pain chills weakness,flu
+runny nose sneezing sore throat mild fever fatigue,flu
+headache fever muscle pain cold cough tiredness,flu
+persistent cough chest discomfort mild fever body pain,flu
+
+severe chest pain breathlessness sweating dizziness nausea,heart_disease
+left arm pain chest tightness short breath fatigue anxiety,heart_disease
+irregular heartbeat fainting weakness cold sweat chest pressure,heart_disease
+severe fatigue chest pain breathlessness dizziness weakness,heart_disease
+
+stomach pain vomiting diarrhea dehydration fever weakness,food_poisoning
+nausea abdominal cramps loose motion loss of appetite fatigue,food_poisoning
+severe stomach ache vomiting fever dehydration weakness,food_poisoning
+food poisoning stomach cramps diarrhea body weakness fever,food_poisoning
+
+
+runny nose sneezing sore throat mild fever,common_cold
+blocked nose cough sneezing watery eyes,common_cold
+loss of smell dry cough fever,covid19
+fever cough breathing difficulty fatigue,covid19
+persistent cough mucus chest pain,bronchitis
+chest congestion cough fatigue,bronchitis
+wheezing chest tightness shortness of breath,asthma
+difficulty breathing coughing wheezing,asthma
+high fever sweating chills headache,malaria
+fever body pain weakness sweating,malaria
+joint pain fever skin rash,dengue
+high fever severe headache muscle pain,dengue
+frequent urination excessive thirst fatigue,diabetes
+blurred vision thirst weight loss,diabetes
+high blood pressure dizziness headache,hypertension
+chest discomfort headache blurred vision,hypertension
+
+runny nose sneezing sore throat mild fever fatigue,common_cold
+blocked nose watery eyes sneezing cough,common_cold
+mild fever sore throat runny nose fatigue,common_cold
+
+loss of smell dry cough fever breathing difficulty,covid19
+fever cough fatigue body pain loss of taste,covid19
+persistent dry cough fever breathing problem,covid19
+
+persistent cough mucus chest pain fatigue,bronchitis
+chest congestion cough fatigue weakness,bronchitis
+cough mucus shortness of breath chest discomfort,bronchitis
+
+wheezing shortness of breath chest tightness,asthma
+difficulty breathing coughing wheezing,asthma
+breathing difficulty chest tightness fatigue,asthma
+
+high fever chills headache sweating,malaria
+fever body pain weakness sweating,malaria
+headache chills sweating high temperature,malaria
+
+joint pain fever skin rash fatigue,dengue
+high fever severe headache muscle pain,dengue
+body pain skin rash fever weakness,dengue
+
+frequent urination excessive thirst fatigue,diabetes
+blurred vision thirst weight loss fatigue,diabetes
+high blood sugar fatigue frequent urination,diabetes
+
+high blood pressure dizziness headache,hypertension
+chest discomfort headache blurred vision,hypertension
+dizziness fatigue elevated blood pressure,hypertension
+
+severe headache nausea sensitivity to light,migraine
+head pain vomiting nausea light sensitivity,migraine
+intense headache dizziness nausea,migraine

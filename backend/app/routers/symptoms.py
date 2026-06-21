@@ -41,6 +41,9 @@ def symptom_history():
         result.append({
             "id": record.id,
             "symptom": record.symptom,
+            "predicted_disease": record.predicted_disease,
+            "confidence": record.confidence,
+            "severity": record.severity,
             "created_at": record.created_at
         })
 

@@ -28,6 +28,9 @@ if not os.path.exists(DATA_PATH):
 df = pd.read_csv(DATA_PATH)
 df = df.dropna()
 
+print("\nDisease Counts:")
+print(df["disease"].value_counts())
+
 print("\nDataset Shape:", df.shape)
 print("Unique diseases:", df["disease"].nunique())
 
