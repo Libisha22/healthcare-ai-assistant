@@ -6,6 +6,9 @@ from app.routers.symptoms import router as symptom_router
 from app.routers.prediction import router as prediction_router
 from app.routers.analytics import router as analytics_router
 from app.routers.report import router as report_router
+from app.routers.email_routers import router as email_router
+from fastapi_mail import FastMail
+
 
 app = FastAPI(
     title="AI Healthcare Assistant",
@@ -38,6 +41,7 @@ app.include_router(symptom_router)
 app.include_router(prediction_router)
 app.include_router(analytics_router, tags=["Analytics"])
 app.include_router(report_router)
+app.include_router(email_router)
 
 # Home Route
 @app.get("/")
