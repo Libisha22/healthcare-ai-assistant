@@ -1,10 +1,14 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy import text
+
 from app.models.symptom import SymptomRequest
 from app.models.symptom_record import SymptomRecord
 from app.database import SessionLocal
 from app.services.diagnosis_service import analyze_symptom
+from app.services.auth_dependency import get_current_user
 
 router = APIRouter()
+
 
 @router.post("/symptom-checker")
 def symptom_checker(data: SymptomRequest):
@@ -29,11 +33,31 @@ def symptom_checker(data: SymptomRequest):
 
 
 @router.get("/symptom-history")
-def symptom_history():
+def symptom_history(
+    current_user=Depends(get_current_user)
+):
 
     db = SessionLocal()
 
-    records = db.query(SymptomRecord).all()
+    email = current_user["sub"]
+
+    user = db.execute(
+        text("""
+            SELECT id
+            FROM users
+            WHERE email = :email
+        """),
+        {
+            "email": email
+        }
+    ).fetchone()
+
+    records = (
+        db.query(SymptomRecord)
+        .filter(SymptomRecord.user_id == user.id)
+        .order_by(SymptomRecord.created_at.desc())
+        .all()
+    )
 
     result = []
 

@@ -1,3 +1,9 @@
+from fastapi import Depends
+from sqlalchemy import text
+from app.services.auth_dependency import get_current_user
+
+
+
 from fastapi import APIRouter
 from pydantic import BaseModel
 from typing import List, Optional
@@ -39,7 +45,10 @@ class PredictionResponse(BaseModel):
     description="Predicts possible diseases from symptoms using a trained Machine Learning model",
     response_model=PredictionResponse
 )
-def disease_prediction(data: PredictionRequest):
+def disease_prediction(
+    data: PredictionRequest,
+    current_user=Depends(get_current_user)
+):
     # Run ML Model
     predictions = predict_disease(data.symptoms)
 
@@ -55,21 +64,46 @@ def disease_prediction(data: PredictionRequest):
     # Save Top Prediction to PostgreSQL
     try:
         if len(predictions) > 0:
+
             top_prediction = predictions[0]
+
             print("TOP PREDICTION =", top_prediction)
 
             db = SessionLocal()
+
+            # Get logged-in user's email from JWT
+            email = current_user["sub"]
+
+            # Find user id from users table
+            user = db.execute(
+                text("""
+                    SELECT id
+                    FROM users
+                    WHERE email = :email
+                """),
+                {
+                    "email": email
+                }
+            ).fetchone()
+
+            if not user:
+                raise Exception("User not found")
+
             record = SymptomRecord(
+                user_id=user.id,
                 symptom=data.symptoms,
                 predicted_disease=top_prediction.get("disease"),
                 severity=top_prediction.get("severity"),
                 confidence=float(top_prediction["confidence"])
             )
+
             db.add(record)
             db.commit()
-            print("DATA SAVED SUCCESSFULLY")
-            db.close()
 
+            print("DATA SAVED SUCCESSFULLY")
+            print("USER ID =", user.id)
+
+            db.close()
     except Exception as e:
         print("DATABASE ERROR:", e)
 

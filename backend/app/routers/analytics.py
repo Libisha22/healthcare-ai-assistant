@@ -1,42 +1,78 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
+from sqlalchemy import text
+
 from app.database import SessionLocal
 from app.models.symptom_record import SymptomRecord
+from app.services.auth_dependency import get_current_user
 
 router = APIRouter()
 
+
 @router.get("/analytics")
-def analytics():
+def get_analytics(
+    current_user=Depends(get_current_user)
+):
 
     db = SessionLocal()
 
-    history = db.query(
-        SymptomRecord
-    ).all()
+    email = current_user["sub"]
 
-    total_predictions = len(history)
+    user = db.execute(
+        text("""
+            SELECT id
+            FROM users
+            WHERE email = :email
+        """),
+        {
+            "email": email
+        }
+    ).fetchone()
 
-    high_risk = 0
-    medium_risk = 0
-    low_risk = 0
+    if not user:
+        db.close()
+        return {}
 
-    for item in history:
+    user_id = user.id
 
-        symptom = item.symptom.lower()
+    records = (
+        db.query(SymptomRecord)
+        .filter(SymptomRecord.user_id == user_id)
+        .all()
+    )
 
-        if "dengue" in symptom or "heart" in symptom:
-            high_risk += 1
+    total_predictions = len(records)
 
-        elif "covid" in symptom or "bronchitis" in symptom:
-            medium_risk += 1
+    disease_count = {}
 
-        else:
-            low_risk += 1
+    for record in records:
+
+        disease = record.predicted_disease
+
+        if disease:
+
+            disease_count[disease] = (
+                disease_count.get(disease, 0) + 1
+            )
+
+    top_disease = None
+
+    if disease_count:
+
+        top_disease = max(
+            disease_count,
+            key=disease_count.get
+        )
+
+    latest_prediction = None
+
+    if records:
+
+        latest_prediction = records[-1].predicted_disease
 
     db.close()
 
     return {
         "total_predictions": total_predictions,
-        "high_risk": high_risk,
-        "medium_risk": medium_risk,
-        "low_risk": low_risk
+        "top_disease": top_disease,
+        "latest_prediction": latest_prediction
     }

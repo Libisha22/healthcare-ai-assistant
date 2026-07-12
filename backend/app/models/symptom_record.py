@@ -10,6 +10,8 @@ class SymptomRecord(Base):
 
     id = Column(Integer, primary_key=True, index=True)
 
+    user_id = Column(Integer)   # NEW
+
     symptom = Column(String, nullable=False)
 
     predicted_disease = Column(String)
@@ -22,3 +24,4 @@ class SymptomRecord(Base):
         DateTime,
         default=datetime.utcnow
     )
+    
